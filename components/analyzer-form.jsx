@@ -1,16 +1,9 @@
-"use client"
-
 import {useState} from 'react';
 import {Tabs,TabsContent,TabsList,TabsTrigger} from '@/components/ui/tabs';
 import {AlertCircle,Loader2,LinkIcon} from 'lucide-react';
 
-interface AnalyzerFormProps {
-  onAnalyze: (url: string) => Promise<void>
-  loading: boolean
-}
-
-export default function AnalyzerForm({ onAnalyze, loading }: AnalyzerFormProps) {
-  const [url, setUrl] = useState("")
+export default function AnalyzerForm({ onAnalyze, loading }) {
+  let [url, setUrl] = useState("")
   const [text, setText] = useState("")
   const [error, setError] = useState("")
 
