@@ -1,13 +1,12 @@
-import typeReact from 'react';
-import type{Metadata} from 'next';
-import {Geist,Geist_Mono} from 'next/font/google';
-import {Analytics} from '@vercel/analytics/next';
+import React from 'react';
+import { Geist, Geist_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-export metadata Metadata = {
+export const metadata = {
   title: "LegalShield - Terms & Conditions Analyzer",
   description:
     "AI-powered tool that scans and analyzes Terms & Conditions for anti-consumer clauses, hidden costs, and data-sharing risks.",
@@ -31,11 +30,7 @@ export metadata Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>

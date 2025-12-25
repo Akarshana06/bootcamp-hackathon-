@@ -6,7 +6,7 @@ import {Menu,X} from 'lucide-react';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })

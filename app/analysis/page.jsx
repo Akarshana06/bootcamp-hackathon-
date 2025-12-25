@@ -13,7 +13,7 @@ export default function AnalysisPage() {
   const [results, setResults] = useState(null)
   const [loading, setLoading] = useState(false)
 
-  const handleAnalysis = async (inputUrl: string) => {
+  const handleAnalysis = async (inputUrl) => {
     setLoading(true)
     await new Promise((resolve) => setTimeout(resolve, 2000))
 

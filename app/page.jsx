@@ -14,7 +14,7 @@ export default function Home() {
   const [results, setResults] = useState(null)
   const [loading, setLoading] = useState(false)
 
-  const handleAnalysis = async (url: string) => {
+  const handleAnalysis = async (url) => {
     setLoading(true)
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
